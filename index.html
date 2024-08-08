@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRP - LOMBA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Formulir Pendaftaran Lomba - SCRP</h1>
+
+<form id="registrationForm">
+    <label for="name">Nama Ic:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="age">Umur / level:</label><br>
+    <input type="number" id="age" name="age" required><br><br>
+    <label for="competition">Nama Perlombaan: (menembak/renang/lari)</label><br>
+    <input type="text" id="competition" name="competition" required><br><br>
+    <input type="submit" value="Daftar">
+</form>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah pengiriman form secara default
+
+        // Mendapatkan nilai dari input
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var competition = document.getElementById("competition").value;
+
+        // Membuat URL sesuai format yang diinginkan
+        var url = "https://api.whatsapp.com/send?phone=6288214764360&text=nama ic *" + name + "* umur ic *" + age + "* mau ikut lomba *" + competition.replace(/\s+/g, '*') + "";
+
+        // Mengalihkan ke URL yang dihasilkan
+        window.location.href = url;
+    });
+</script>
+
+</body>
+</html>
+
+
+	<style>
+    body {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS2VzrwlNZ032wqX5y2trqotrgFhKnqpYQtw-5qsLppowaIUEIjzifi-8n&s=10');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .submi {
+  background-color: #fdef0c;
+  color: black;
+  padding: 7px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 3px solid #fdef0c;
+}
+form {
+            width: 290px;
+            margin: 0 auto;
+            background-color: #;
+            padding: 200lpx;
+            border-radius: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            color: red; /* set the text color of the input field to red */
+        }
+    </style>
